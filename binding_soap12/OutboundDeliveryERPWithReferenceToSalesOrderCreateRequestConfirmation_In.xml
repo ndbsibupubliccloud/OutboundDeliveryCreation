@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="90a60981-ff6e-48ae-bf03-4acf57ebb781" isOneWay="false" action="http://sap.com/xi/APPL/SE/Global/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_InRequest" name="OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In" bindingOperationName="OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings>
+    <con:setting id="90a60981-ff6e-48ae-bf03-4acf57ebb781fileName">OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In</con:setting>
+  </con:settings>
+  <con:call id="0bf1233b-a26f-4e7c-8fa2-f6d7dd34e1ec" name="Request 1" useWsAddressing="true">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://my419475-api.s4hana.cloud.sap/sap/bc/srt/scs_ext/sap/ecc_outbounddeliverycwrrc</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:glob="http://sap.com/xi/APPL/SE/Global">
+   <soap:Header/>
+   <soap:Body>
+      <glob:OutboundDeliveryERPWithReferenceToSalesOrderCreateRequest_sync>
+         <MessageHeader/>
+         <OutboundDelivery>
+            <SalesOrderReference>
+               <ID>2101000130</ID>
+            </SalesOrderReference>
+            <Dates>
+               <DeliveryDueDateTime>2025-11-12T23:59:59Z</DeliveryDueDateTime>
+            </Dates>
+            <ShippingPointParty>
+               <InternalID>1100</InternalID>
+            </ShippingPointParty>
+         </OutboundDelivery>
+      </glob:OutboundDeliveryERPWithReferenceToSalesOrderCreateRequest_sync>
+   </soap:Body>
+</soap:Envelope>
+]]></con:request>
+    <con:credentials>
+      <con:username>CPI_COM</con:username>
+      <con:password>fupi8xlLsuRZRmYwBKtUqaorELcnYa&lt;EvKncVidV</con:password>
+      <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+      <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+      <con:authType>Global HTTP Settings</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/APPL/SE/Global/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_InRequest" generateMessageId="true"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+</con:operation>

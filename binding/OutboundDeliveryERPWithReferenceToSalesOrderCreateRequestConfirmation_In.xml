@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" id="72cf3670-f82e-4508-981f-89be74eccecc" isOneWay="false" action="http://sap.com/xi/APPL/SE/Global/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_InRequest" name="OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In" bindingOperationName="OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+  <con:settings>
+    <con:setting id="72cf3670-f82e-4508-981f-89be74ecceccfileName">OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In</con:setting>
+  </con:settings>
+  <con:call id="e33b04fe-3885-43f5-9782-9228d38b42d4" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://my419475-api.s4hana.cloud.sap/sap/bc/srt/scs_ext/sap/ecc_outbounddeliverycwrrc</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:glob="http://sap.com/xi/APPL/SE/Global">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <glob:OutboundDeliveryERPWithReferenceToSalesOrderCreateRequest_sync>\r
+         <!--Optional:-->\r
+         <MessageHeader>\r
+            <!--Optional:-->\r
+            <ID schemeID="?" schemeAgencyID="?" schemeAgencySchemeAgencyID="?">?</ID>\r
+            <!--Optional:-->\r
+            <UUID>?</UUID>\r
+            <!--Optional:-->\r
+            <ReferenceID schemeID="?" schemeAgencyID="?" schemeAgencySchemeAgencyID="?">?</ReferenceID>\r
+            <!--Optional:-->\r
+            <ReferenceUUID>?</ReferenceUUID>\r
+         </MessageHeader>\r
+         <OutboundDelivery>\r
+            <!--Optional:-->\r
+            <ID schemeAgencyID="?">?</ID>\r
+            <!--Zero or more repetitions:-->\r
+            <SalesOrderReference>\r
+               <ID schemeAgencyID="?">?</ID>\r
+            </SalesOrderReference>\r
+            <!--Optional:-->\r
+            <Dates>\r
+               <DeliveryDueDateTime>?</DeliveryDueDateTime>\r
+            </Dates>\r
+            <!--Optional:-->\r
+            <ShippingPointParty>\r
+               <InternalID schemeID="?" schemeAgencyID="?">?</InternalID>\r
+            </ShippingPointParty>\r
+            <!--Zero or more repetitions:-->\r
+            <Item>\r
+               <SalesOrderReference>\r
+                  <ID schemeAgencyID="?">?</ID>\r
+                  <ItemID>?</ItemID>\r
+               </SalesOrderReference>\r
+               <!--Optional:-->\r
+               <DeliveryTerms/>\r
+               <!--Zero or more repetitions:-->\r
+               <SerialNumber>\r
+                  <SerialID>?</SerialID>\r
+               </SerialNumber>\r
+               <!--Optional:-->\r
+               <Quantities>\r
+                  <DeliveryQuantity unitCode="?">?</DeliveryQuantity>\r
+               </Quantities>\r
+            </Item>\r
+         </OutboundDelivery>\r
+      </glob:OutboundDeliveryERPWithReferenceToSalesOrderCreateRequest_sync>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/APPL/SE/Global/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_In/OutboundDeliveryERPWithReferenceToSalesOrderCreateRequestConfirmation_InRequest"/>
+  </con:call>
+</con:operation>
